@@ -11,72 +11,30 @@ import { useEffect } from 'react';
 const HomePage = () => {
 
     const [allImg, getALLImg, isLoading] = useFetchImg();
-    // console.log(allImg);
+    console.log(allImg);
     // console.log(isLoading);
 
     useEffect(() => {
         getALLImg('random-images');
+        getALLImg();
     }, [getALLImg]);
-
-    // const col1_images = [
-    //     'r1',
-    //     'r2',
-    //     'r3',
-    //     'r4',
-    //     'r5',
-    //     'r6',
-    //     'r7',
-    //     'r8',
-    //     'r9',
-    //     'r10',
-    //     'r11',
-    // ];
-
-    // const col2_images = [
-    //     'r12',
-    //     'r13',
-    //     'r14',
-    //     'r15',
-    //     'r16',
-    //     'r17',
-    //     'r18',
-    //     'r19',
-    //     'r20',
-    //     'r21',
-    //     'r22',
-    //     'r23',
-    //     'r24',
-    //     'r25',
-    // ];
-
-    // const col3_images = [
-    //     'r26',
-    //     'r27',
-    //     'r28',
-    //     'r29',
-    //     'r30',
-    //     'r31',
-    //     'r32',
-    //     'r33',
-    //     'r34',
-    //     'r35',
-    //     'r36',
-    // ];
 
     const col1_images = [];
     const col2_images = [];
     const col3_images = [];
 
     allImg.forEach((img, i) => {
-        if(i < 11) {
+        const length = allImg.length;
+        const colWiseLength = Math.floor((length / 3));
+        if (i <= colWiseLength) {
             col1_images.push(img);
         }
 
-        else if(i > 11 && i < 26){
+        else if (i > colWiseLength && i <= colWiseLength * 2) {
             col2_images.push(img);
         }
 
-        else if(i > 26 && i < 37){
+        else if (i > colWiseLength * 2 && i <= colWiseLength * 3) {
             col3_images.push(img);
         }
     })
@@ -133,28 +91,6 @@ const HomePage = () => {
                                 <img src={img.imgUrl} alt={img.imgName} />
                             </div>
                         ))}
-
-
-                        {/* {allImg.map((img, i) => {
-                            if (i < 14) {
-                                return <div key={img.imgName} className={styles.img}>
-                                    <img src={img.imgUrl} alt={img.imgName} />
-                                </div>
-                            }
-                        })} */}
-
-
-
-
-                        {/* <div className={styles.img}>
-                            <img src={require('../../assets/r2.png')} alt="img" />
-                        </div>
-                        <div className={styles.img}>
-                            <img src={require('../../assets/r3.png')} alt="img" />
-                        </div>
-                        <div className={styles.img}>
-                            <img src={require('../../assets/r4.png')} alt="img" />
-                        </div> */}
                     </div>
 
                     <div className={styles.col_img}>
@@ -163,31 +99,6 @@ const HomePage = () => {
                                 <img src={img.imgUrl} alt={img.imgName} />
                             </div>
                         ))}
-
-
-                        {/* {allImg.map((img, i) => {
-                            if (i > 14 && i < 28) {
-                                return <div key={img.imgName} className={styles.img}>
-                                    <img src={img.imgUrl} alt={img.imgName} />
-                                </div>
-                            }
-                        })} */}
-
-
-
-
-                        {/* <div className={styles.img}>
-                            <img src={require('../../assets/r1.png')} alt="img" />
-                        </div>
-                        <div className={styles.img}>
-                            <img src={require('../../assets/r1.png')} alt="img" />
-                        </div>
-                        <div className={styles.img}>
-                            <img src={require('../../assets/r1.png')} alt="img" />
-                        </div>
-                        <div className={styles.img}>
-                            <img src={require('../../assets/r1.png')} alt="img" />
-                        </div> */}
                     </div>
 
                     <div className={styles.col_img}>
@@ -196,35 +107,10 @@ const HomePage = () => {
                                 <img src={img.imgUrl} alt={img.imgName} />
                             </div>
                         ))}
-
-
-                        {/* {allImg.map((img, i) => {
-                            if (i > 28 && i < 41) {
-                                return <div key={img.imgName} className={styles.img}>
-                                    <img src={img.imgUrl} alt={img.imgName} />
-                                </div>
-                            }
-                        })} */}
-
-
-
-
-                        {/* <div className={styles.img}>
-                            <img src={require('../../assets/r1.png')} alt="img" />
-                        </div>
-                        <div className={styles.img}>
-                            <img src={require('../../assets/r1.png')} alt="img" />
-                        </div>
-                        <div className={styles.img}>
-                            <img src={require('../../assets/r1.png')} alt="img" />
-                        </div>
-                        <div className={styles.img}>
-                            <img src={require('../../assets/r1.png')} alt="img" />
-                        </div> */}
                     </div>
                 </div>
                 {isLoading && <div className={styles.loading_state}>
-                   <h1>LOADING...</h1>
+                    <h1>LOADING...</h1>
                 </div>}
             </section>
         </>

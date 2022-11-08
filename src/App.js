@@ -1,6 +1,7 @@
 import { Route, Switch } from 'react-router-dom';
 
 import './App.css';
+
 import Authentication from './components/authentication page/Authentication';
 import Categories from './components/category page/Categories';
 import Create from './components/create page/Create';
