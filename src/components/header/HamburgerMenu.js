@@ -42,10 +42,10 @@ const HamburgerMenu = () => {
       <ul className="all_menu_links">
         <li onClick={manageBtnHandler}>MANAGE <span><RiArrowDownSFill className='down_arrow' /></span>
           <ul className={`${!isManageBtnClicked ? 'hidden' : ''}`}>
-            <li><Link to={'/'}>Profile</Link></li>
-            <li><Link to={'/'}>Purchases</Link></li>
-            <li><Link to={'/'}>Favorites</Link></li>
-            <li><Link to={'/'}>Invoices</Link></li>
+            <li><Link to={'/profile'}>Profile</Link></li>
+            <li><Link to={'/purchase'}>Purchases</Link></li>
+            <li><Link to={'/favorites'}>Favorites</Link></li>
+            <li><Link to={'/invoice'}>Invoices</Link></li>
           </ul>
         </li>
         <li onClick={CategoryBtnhandler}>CATERGORIES <span><RiArrowDownSFill className='down_arrow' /></span>
@@ -74,8 +74,8 @@ const HamburgerMenu = () => {
 
       <div className="basic_links">
         <Link to={'/terms&condition'}>Terms & Conditions</Link>
-        <Link to={'/terms&condition'}>Privacy Policy</Link>
-        <Link to={'/'}>Licensing agreement</Link>
+        <Link to={'/privacy-policy'}>Privacy Policy</Link>
+        <Link to={'/license'}>Licensing agreement</Link>
         <Link to={'/'}>Sub-processors</Link>
         <Link to={'/'}>English</Link>
       </div>

@@ -5,12 +5,17 @@ import Authentication from './components/authentication page/Authentication';
 import Categories from './components/category page/Categories';
 import Create from './components/create page/Create';
 import Explore from './components/explore page/Explore';
+import Favorites from './components/favorites/Favorites';
 import HomePage from './components/homepage/HomePage';
+import Invoice from './components/invoices/Invoice';
 import Layout from './components/Layout';
 import Editing from './components/others/Editing';
 import License from './components/others/License';
+import PrivacyPolicy from './components/others/PrivacyPolicy';
 import TermsAndCondition from './components/others/TermsAndCondition';
 import Pricing from './components/pricing page/Pricing';
+import Profile from './components/profile/Profile';
+import Purchase from './components/purchase/Purchase';
 
 function App() {
   return (
@@ -43,6 +48,26 @@ function App() {
 
           <Route path={'/editing'}>
             <Editing />
+          </Route>
+
+          <Route path={'/profile'}>
+            <Profile />
+          </Route>
+
+          <Route path={'/purchase'}>
+            <Purchase />
+          </Route>
+
+          <Route path={'/favorites'}>
+            <Favorites />
+          </Route>
+
+          <Route path={'/invoice'}>
+            <Invoice />
+          </Route>
+
+          <Route path={'/privacy-policy'}>
+            <PrivacyPolicy />
           </Route>
 
           <Route path={'/terms&condition'}>

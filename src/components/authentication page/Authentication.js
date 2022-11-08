@@ -48,6 +48,30 @@ const Signup = () => {
         // console.log(data);
         dispatch(firebaseActions.checkAuthentication(data.idToken));
 
+        if(whichForm === 'signup'){
+            sendEmailVerification(data.idToken);
+        }
+
+
+    }
+
+    // Email verification*****************************************************************************************
+    const sendEmailVerification = async (token) => {
+        const response = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:sendOobCode?key=AIzaSyB6HN233smzZv1phyZckLpZGTXp3TUCDjQ',
+            {
+                method: 'POST',
+                body: JSON.stringify({requestType: "VERIFY_EMAIL", idToken: token}),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            alert(data.error.message);
+            throw new Error('something went wromg!!');
+        }
     }
 
 
@@ -69,6 +93,8 @@ const Signup = () => {
 
 
         fetchData('signup', emailInput.current.value, passwordInput.current.value);
+
+        history.replace('/');
 
         usernameInput.current.value = '';
         emailInput.current.value = '';
@@ -167,7 +193,7 @@ const Signup = () => {
 
                 {location.pathname !== '/signup' && <h4>Or, <Link to="/signup">create a free account</Link></h4>}
 
-                {location.pathname === '/signup' && <p className={styles.links}>By creating your account, you agree to the <Link to="/license">licensing agreement</Link> , <Link to="/terms&condition"> terms & conditions</Link> and <Link to="/terms&condition" >privacy policy</Link>.</p>}
+                {location.pathname === '/signup' && <p className={styles.links}>By creating your account, you agree to the <Link to="/license">licensing agreement</Link> , <Link to="/terms&condition"> terms & conditions</Link> and <Link to="/privacy-policy" >privacy policy</Link>.</p>}
             </div>
 
             <div className={styles.footer}>

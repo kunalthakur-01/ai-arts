@@ -37,9 +37,9 @@
 
 .plan {
     padding: 2rem 2.5rem;
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    justify-content: center; */
+    justify-content: center;
 }
 
 .subscription_plans .plan:nth-child(1) {
@@ -110,6 +110,7 @@
 .plan ul {
     margin-top: 4rem;
     list-style-image: url('../../assets/tick.svg');
+    /* margin-bottom: 2rem; */
 }
 
 .plan:nth-child(4) ul {
@@ -131,6 +132,7 @@
 }
 
 .getPlan_btn {
+    text-decoration: none;
     color: rgba(255, 255, 255, 1);
     font-size: 14px;
     font-style: Semi Bold;
@@ -142,7 +144,7 @@
     border: 2px solid white;
     background-color: transparent;
     padding: 10px 23px;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
 }
 
 .credit_link {
