@@ -54,6 +54,8 @@
     /* grid-template-columns: repeat( auto-fit , minmax(278px, 1fr)); */
     /* grid-template-columns: repeat( auto-fill , minmax(278px, 1fr)); */
     padding: 3rem 0;
+    /* grid-auto-flow: dense; */
+    /* grid-auto-rows: 100px 300px; */
 }
 
 .col_img {

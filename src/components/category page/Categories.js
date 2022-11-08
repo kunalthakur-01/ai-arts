@@ -9,7 +9,7 @@ import styles from './Categories.module.css';
 const Categories = () => {
 
     const [allImg, getALLImg, isLoading] = useFetchImg();
-    console.log(allImg);
+    // console.log(allImg);
 
     const params = useParams();
 

@@ -11,7 +11,7 @@ import { useEffect } from 'react';
 const HomePage = () => {
 
     const [allImg, getALLImg, isLoading] = useFetchImg();
-    console.log(allImg);
+    // console.log(allImg);
     // console.log(isLoading);
 
     useEffect(() => {
