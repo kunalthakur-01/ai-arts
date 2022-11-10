@@ -84,7 +84,7 @@ const Header = () => {
             <div className={`${styles.categories_header}`}>
                 <span>Categories</span>
                 <ul>
-                    <li><Link to="/category/food and drink">Food & Drink</Link></li>
+                    <li><Link to="/category/Food&Drink">Food & Drink</Link></li>
                     <li><Link to="/category/">Current Events</Link></li>
                     <li><Link to="/category/">Wallpapers</Link></li>
                     <li><Link to="/category/">3D Renders</Link></li>

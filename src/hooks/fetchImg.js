@@ -31,7 +31,7 @@ const useFetchImg = () => {
     }, []);
 
 
-    const getALLImg = useCallback((dir = 'food and drink') => {
+    const getALLImg = useCallback((dir = 'Food&Drink') => {
         const listRef = ref(storage, dir);
 
         listAll(listRef)
