@@ -39,7 +39,8 @@
     padding: 2rem 2.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    position: relative;
 }
 
 .subscription_plans .plan:nth-child(1) {
@@ -109,12 +110,6 @@
 
 .plan ul {
     margin-top: 4rem;
-    list-style-image: url('../../assets/tick.svg');
-    /* margin-bottom: 2rem; */
-}
-
-.plan:nth-child(4) ul {
-    list-style-image: url('../../assets/list-style.WBEP');
 }
 
 .plan ul li {
@@ -125,11 +120,53 @@
     font-weight: 500;
     line-height: normal;
     font-stretch: normal;
+    position: relative;
+}
+
+.plan ul li::before {
+    content: url('../../assets/tick.svg');
+    position: absolute;
+    left: -18px;
+    top: 0;
+}
+
+.plan:nth-child(4) ul li::before {
+    content: url('../../assets/list-style.WBEP');
+    position: absolute;
+    left: -23px;
+    top: 0;
 }
 
 .plan:nth-child(1) .getPlan_btn {
     margin-top: 5rem;
 }
+
+.most_popular {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 10px;
+    color: white;
+    background-color: rgba(71, 184, 187, 0.804)
+}
+
+.most_popular span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 15px;
+
+}
+
+.star_icon {
+    margin-right: 10px;
+}
+
 
 .getPlan_btn {
     text-decoration: none;

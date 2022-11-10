@@ -136,7 +136,7 @@ const Signup = () => {
     return (
         <section className={styles.authentication_page}>
             <div className={styles.logo}>
-                <img src={require('../../assets/21e51990-9be8-4cdc-90bc-efadf12136b9.png')} alt="" />
+                <Link to={'/'}><img src={require('../../assets/21e51990-9be8-4cdc-90bc-efadf12136b9.png')} alt="" /></Link>
             </div>
 
             <div className={styles.auth_section}>
@@ -158,8 +158,8 @@ const Signup = () => {
 
                 {location.pathname === '/signup' && <form onSubmit={signupFormHandler} className={styles.signup_form} action="/">
                     <div className={styles.input_field}>
-                        <label htmlFor="username">Name</label>
-                        <input type="text" ref={usernameInput} name='username' placeholder='Enter your name' required />
+                        <label htmlFor="username">Username</label>
+                        <input type="text" ref={usernameInput} name='username' placeholder='Enter your Username' required />
                     </div>
                     <div className={styles.input_field}>
                         <label htmlFor="email">Email</label>

@@ -196,6 +196,10 @@
     color: rgba(84, 84, 84, 1);
 }
 
+.links a {
+    text-decoration: underline;
+}
+
 .footer {
     margin: 3rem 0;
     display: flex;

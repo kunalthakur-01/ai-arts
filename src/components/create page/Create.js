@@ -1,27 +1,32 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import useFetchImg from '../../hooks/fetchImg';
 
 import styles from './Create.module.css';
 
 const Create = () => {
 
-    const allImg = [
-        'r1',
-        'r22',
-        'r30',
-        'r34',
-        'r5',
-        'r6',
-        'r7',
-        'r8',
-        'r9',
-        'r10',
-        'r11',
-        'r12',
-        'r13',
-        'r14',
-        'r15',
-    ]
+    const [allImg, getALLImg, isLoading] = useFetchImg();
+    // console.log(allImg);
+
+    // const params = useParams();
+
+    useEffect(() => {
+        if (allImg.length === 0) {
+            getALLImg('random-images');
+            getALLImg();
+        }
+    }, [getALLImg, allImg.length]);
+
+    const allFetchedImg = [];
+
+    allImg.forEach((img, i) => {
+        if (i < 15) {
+            allFetchedImg.push(img);
+        }
+    })
+
     return (
         <section className={styles.create_page}>
 
@@ -61,63 +66,22 @@ const Create = () => {
 
             </div>
 
-            <div className={styles.all_img}>
-                {allImg.map(img => (
-                    <div key={img} className={styles.img}>
-                        <img src={require(`../../assets/${img}.png`)} alt={img} />
+            {!isLoading && <div className={styles.all_img}>
+                {allFetchedImg.map(img => (
+                    <div key={img.Name} className={styles.img}>
+                        <img src={img.imgUrl} alt={img.imgName} />
                     </div>
                 ))}
-                {/* <div className={styles.img}>
-                    <img src={require('../../assets/aed55c419ee3e09d4a161f456b146710.png')} alt="img" />
-                </div>
-                <div className={styles.img}>
-                    <img src={require('../../assets/dfc23184bec71886d5e2ae4f881a34ce.png')} alt="img" />
-                </div>
-                <div className={styles.img}>
-                    <img src={require('../../assets/fa95d9a3d364040ff5bc8a20578530d8.png')} alt="img" />
-                </div>
-                <div className={styles.img}>
-                    <img src={require('../../assets/efdfb1baaa3e75c376057aaf2d1cc90b.png')} alt="img" />
-                </div>
-                <div className={styles.img}>
-                    <img src={require('../../assets/a80088585040e84d143f67d0d40ab834.png')} alt="img" />
-                </div>
-                <div className={styles.img}>
-                    <img src={require('../../assets/efdfb1baaa3e75c376057aaf2d1cc90b.png')} alt="img" />
-                </div>
-                <div className={styles.img}>
-                    <img src={require('../../assets/a47011487cbac80eb882e780790375ce.png')} alt="img" />
-                </div>
-                <div className={styles.img}>
-                    <img src={require('../../assets/acce86d722daba3799b72c8104c0109c.png')} alt="img" />
-                </div>
-                <div className={styles.img}>
-                    <img src={require('../../assets/aed55c419ee3e09d4a161f456b146710.png')} alt="img" />
-                </div>
-                <div className={styles.img}>
-                    <img src={require('../../assets/dfc23184bec71886d5e2ae4f881a34ce.png')} alt="img" />
-                </div>
-                <div className={styles.img}>
-                    <img src={require('../../assets/fa95d9a3d364040ff5bc8a20578530d8.png')} alt="img" />
-                </div>
-                <div className={styles.img}>
-                    <img src={require('../../assets/efdfb1baaa3e75c376057aaf2d1cc90b.png')} alt="img" />
-                </div>
-                <div className={styles.img}>
-                    <img src={require('../../assets/efdfb1baaa3e75c376057aaf2d1cc90b.png')} alt="img" />
-                </div>
-                <div className={styles.img}>
-                    <img src={require('../../assets/a80088585040e84d143f67d0d40ab834.png')} alt="img" />
-                </div>
-                <div className={styles.img}>
-                    <img src={require('../../assets/a47011487cbac80eb882e780790375ce.png')} alt="img" />
-                </div> */}
-            </div>
+            </div>}
 
             <div className={styles.about_section}>
                 <h1>Create your perfect visual now. <br /> <span>No credit card requried.</span></h1>
                 <Link to='/editing'>Try it now for free</Link>
             </div>
+
+            {isLoading && <div className={styles.loading_state}>
+                <h1>LOADING...</h1>
+            </div>}
         </section>
     )
 }

@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 import styles from './Pricing.module.css';
 
+import { AiFillStar } from 'react-icons/ai';
+
 const Pricing = () => {
     return (
         <section className={styles.pricing_section}>
@@ -14,33 +16,40 @@ const Pricing = () => {
             <div className={styles.subscription_plans}>
                 <div className={styles.plan}>
                     <img src='https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/e3ba62aa-42c0-4bec-9859-a1fa7f4ff6ae/10ee99fc-c5cb-4b5d-8be5-7d4a01b8084d?org_if_sml=117902' alt="pic" />
-                    <h2>Lite</h2>
-                    <p>Best Choice for Individuals</p>
+                    <div>
+                        <h2>Lite</h2>
+                        <p>Best Choice for Individuals</p>
+                    </div>
                     <h3>$<sub>9</sub> </h3>
 
                     <ul>
                         <li>20.000+ premium, royalty free stock photos</li>
                         <li>Download large resolution photos</li>
-                        <li>Download large resolution photos</li>
                     </ul>
 
-                    <Link to={'/signup'} className={styles.getPlan_btn}>Get unlimited access</Link>
+                    <Link to={'/credit-checkout'} className={styles.getPlan_btn}>Get unlimited access</Link>
                 </div>
                 <div className={styles.plan}>
                     <img src='https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/e3ba62aa-42c0-4bec-9859-a1fa7f4ff6ae/09883d9c-9409-4444-bddd-c8c29f939b06?org_if_sml=120521' alt="pic" />
-                    <h2>Business</h2>
-                    <p>Small Businesses</p>
+                    <div>
+                        <h2>Business</h2>
+                        <p>Small Businesses</p>
+                    </div>
                     <h3>$<sub>29</sub> </h3>
 
                     <ul>
                         <li>20.000+ premium, royalty free stock photos</li>
-                        <li>20.000+ premium, royalty free stock photos</li>
-                        <li>20.000+ premium, royalty free stock photos</li>
-                        <li>20.000+ premium, royalty free stock photos</li>
                         <li>Download large resolution photos</li>
+                        <li>Access to all tools and features.</li>
+                        <li>Unlimited photo and visualgenerations</li>
+                        <li>Remove watermarks, unlimted stroage, and more.</li>
                     </ul>
 
-                    <Link to={'/signup'} className={styles.getPlan_btn}>Get unlimited access</Link>
+                    <Link to={'/credit-checkout'} className={styles.getPlan_btn}>Get unlimited access</Link>
+
+                    <div className={styles.most_popular}>
+                        <span><AiFillStar className={styles.star_icon}/> Most Polupar</span>
+                    </div>
                 </div>
                 <div className={styles.plan}>
                     <img src='https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/e3ba62aa-42c0-4bec-9859-a1fa7f4ff6ae/30912f72-0c30-468e-a506-6b5f0f28e3ff?org_if_sml=128462' alt="pic" />
@@ -49,13 +58,13 @@ const Pricing = () => {
                     <h3>$<sub>9</sub> </h3>
 
                     <div className={styles.credit_link}>
-                        <Link to={'/signup'}>Purchase 5 credits for $10</Link>
+                        <Link to={'/credit-checkout'}>Purchase 5 credits for $10</Link>
                     </div>
 
                     <h3>$<sub>50</sub> </h3>
 
                     <div className={styles.credit_link}>
-                        <Link to={'/signup'}>Purchase 5 credits for $10</Link>
+                        <Link to={'/credit-checkout'}>Purchase 5 credits for $10</Link>
                     </div>
 
                     <ul>
@@ -64,8 +73,10 @@ const Pricing = () => {
                 </div>
                 <div className={styles.plan}>
                     <img src='https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/e3ba62aa-42c0-4bec-9859-a1fa7f4ff6ae/b6a9a8b8-b6cb-46bc-adcb-b1667dffa53f?org_if_sml=121239' alt="pic" />
-                    <h2>Agency</h2>
-                    <p>Design a custom package</p>
+                    <div>
+                        <h2>Agency</h2>
+                        <p>Design a custom package</p>
+                    </div>
                     <h3>$<sub>599</sub> </h3>
 
                     <ul>
@@ -81,7 +92,7 @@ const Pricing = () => {
                             creation</li>
                     </ul>
 
-                    <Link to={'/signup'} className={styles.getPlan_btn}>Own your visuals</Link>
+                    <Link to={'/credit-checkout'} className={styles.getPlan_btn}>Own your visuals</Link>
                 </div>
             </div>
 

@@ -5,6 +5,7 @@ import './App.css';
 import Authentication from './components/authentication page/Authentication';
 import Categories from './components/category page/Categories';
 import Create from './components/create page/Create';
+import CreditCheckout from './components/credit checkout/CreditCheckout';
 import Explore from './components/explore page/Explore';
 import Favorites from './components/favorites/Favorites';
 import HomePage from './components/homepage/HomePage';
@@ -73,6 +74,10 @@ function App() {
 
           <Route path={'/terms&condition'}>
             <TermsAndCondition />
+          </Route>
+
+          <Route path={'/credit-checkout'}>
+            <CreditCheckout />
           </Route>
 
           <Route path={'/signup'}>
