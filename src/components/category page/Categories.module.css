@@ -1,7 +1,7 @@
 .header {
     width: 100%;
     height: 83vh;
-    background: url('../../assets/categories//food&drink/food\ and\ drink.png');
+    /* background: url('../../assets/categories//food&drink/Food&Drink_bg.png'); */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -10,6 +10,10 @@
 
 .header_text {
     padding: 8% 1% 0 6%;
+}
+
+.header_text h2 {
+    width: 40rem;
 }
 
 .header h1 {
@@ -93,26 +97,19 @@
     opacity: 0.8;
 }
 
-.like_icon {
-    z-index: 5;
-    position: absolute;
-    top: 5px;
-    right: 6.8rem;
-}
-
 .save_icon {
     z-index: 5;
     position: absolute;
-    top: 5px;
-    right: 2rem;
+    top: 13px;
+    right: 1rem;
     /* color: white; */
 }
 
 .download_icon {
     z-index: 5;
     position: absolute;
-    bottom: 5px;
-    right: 2rem;
+    bottom: 13px;
+    right: 1rem;
 }
 
 .loading_state {

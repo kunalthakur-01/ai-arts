@@ -4,7 +4,7 @@ import styles from './CreditCheckout.module.css';
 
 import svgIcon from '../../assets/playgrounds/frame1491-0sap.svg';
 
-import { Link, useHistory, useLocation } from 'react-router-dom';
+import { Link, useHistory, useLocation, useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { firebaseActions } from '../../store/AuthSlice';
 
@@ -13,11 +13,13 @@ const CreditCheckout = () => {
     const dispatch = useDispatch();
     const location = useLocation();
     const history = useHistory();
+    const params = useParams();
 
     const usernameInput = useRef();
     const emailInput = useRef();
     const passwordInput = useRef();
     const repeatPasswordInput = useRef();
+
 
 
     // FETCHING DATA******************************************************************************************
@@ -112,15 +114,15 @@ const CreditCheckout = () => {
                     <div className={styles.checkout_logo}>
                         <img src={svgIcon} alt="" />
                     </div>
-                    <h2>Total checkout price is $10.00</h2>
+                    <h2>Total checkout price is ${params.price}.00</h2>
                 </div>
 
-                {location.pathname === '/credit-checkout' && <h3 className={styles.heading2}>Create an account</h3>}
-                {location.pathname === '/credit-checkout' && <p className={styles.para}>Or if you already have an account, <Link to="/login">login here.</Link></p>}
+                {location.pathname === '/credit-checkout/' + params.price && <h3 className={styles.heading2}>Create an account</h3>}
+                {location.pathname === '/credit-checkout/' + params.price && <p className={styles.para}>Or if you already have an account, <Link to="/login">login here.</Link></p>}
 
 
 
-                {location.pathname === '/credit-checkout' && <form onSubmit={signupFormHandler} className={styles.signup_form} action="/">
+                {location.pathname === '/credit-checkout/' + params.price && <form onSubmit={signupFormHandler} className={styles.signup_form} action="/">
                     <div className={styles.input_field}>
                         <label htmlFor="email">Email</label>
                         <input type="email" ref={emailInput} name='email' placeholder='Enter your email address' required />
@@ -137,7 +139,7 @@ const CreditCheckout = () => {
                 </form>}
 
 
-                {location.pathname === '/credit-checkout' && <p className={styles.links}>By creating your account, you agree to the <Link to="/license">licensing agreement</Link> , <Link to="/terms&condition"> terms & conditions</Link> and <Link to="/privacy-policy" >privacy policy</Link>.</p>}
+                {location.pathname === '/credit-checkout/' + params.price && <p className={styles.links}>By creating your account, you agree to the <Link to="/license">licensing agreement</Link> , <Link to="/terms&condition"> terms & conditions</Link> and <Link to="/privacy-policy" >privacy policy</Link>.</p>}
             </div>
 
             <div className={styles.footer}>

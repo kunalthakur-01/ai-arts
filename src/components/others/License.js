@@ -11,21 +11,21 @@ const License = () => {
             <div className={styles.conditions}>
                 <div>
                     <h2>What is acceptable ✅ </h2>
-                    <p>
-                        Large photographs can only be downloaded with a paid membership
-                        Small photos can be downloaded and used without charge.
-                        both for-profit and nonprofit endeavors.
-                        Free of any royalties.
-                        There is no requirement for permission (but attribution is appreciated!).
-                    </p>
+                    <ul>
+                        <li>Large photographs can only be downloaded with a paid membership</li>
+                        <li>Small photos can be downloaded and used without charge.</li>
+                        <li>both for-profit and nonprofit endeavors.</li>
+                        <li>Free of any royalties.</li>
+                        <li>There is no requirement for permission (but attribution is appreciated!).</li>
+                    </ul>
                 </div>
                 <div>
                     <h2>What is not allowed ❌</h2>
-                    <p>
-                        Photos cannot be sold without major alterations.
-                        Don't resell the images or animations, videos as-is on other stock photos or sites.
-                        Assembling images from AiArts to imitate a comparable or rival service.
-                    </p>
+                    <ul>
+                        <li>Photos cannot be sold without major alterations.</li>
+                        <li>Don't resell the images or animations, videos as-is on other stock photos or sites.</li>
+                        <li>Assembling images from AiArts to imitate a comparable or rival service.</li>
+                    </ul>
                 </div>
                 <div>
                     <h2>Longform </h2>

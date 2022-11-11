@@ -10,7 +10,7 @@ const useFetchImg = () => {
     const [allImg, setAllImg] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
-    const getImgDownloadUrl = useCallback((i, img, name, fetchData) => {
+    const getImgDownloadUrl = useCallback((img, name) => {
         getDownloadURL(ref(storage, img))
             .then((url) => {
                 // console.log(i);
@@ -36,9 +36,11 @@ const useFetchImg = () => {
 
         listAll(listRef)
             .then((res) => {
+                setAllImg([]);
+                setIsLoading(true);
                 res.items.forEach((itemRef, i) => {
                     let imgName = itemRef.name.split('.')[0];
-                    getImgDownloadUrl(i, itemRef, imgName);
+                    getImgDownloadUrl(itemRef, imgName);
                 });
             }).catch((error) => {
                 console.error(error.message);

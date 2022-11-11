@@ -5,7 +5,7 @@ import Header from './header/Header'
 const Layout = (props) => {
 
   const location = useLocation();
-  // console.log(location);
+
   return (
     <>
         {location.pathname !== '/signup' && location.pathname !== '/login' &&  <Header />}

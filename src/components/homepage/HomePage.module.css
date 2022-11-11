@@ -110,6 +110,10 @@
     letter-spacing: 0px;
 }
 
+.text_onImg p a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+}
 .read_more {
     font: 400  "Ubuntu", Helvetica, Arial, serif;
     color: white;
@@ -155,10 +159,7 @@
 /* all images**********************************************************************/
 .all_img {
     width: 85%;
-    margin: 0 auto;
-    /* display: flex;
-    justify-content: space-between; */
-    
+    margin: 0 auto;    
     display: grid;
     gap: 24px;
     grid-template-columns: repeat(3, 1fr);
@@ -203,26 +204,19 @@
     opacity: 0.8;
 }
 
-.like_icon {
-    z-index: 5;
-    position: absolute;
-    top: 5px;
-    right: 6.8rem;
-}
-
 .save_icon {
     z-index: 5;
     position: absolute;
-    top: 5px;
-    right: 2rem;
+    top: 13px;
+    right: 1rem;
     /* color: white; */
 }
 
 .download_icon {
     z-index: 5;
     position: absolute;
-    bottom: 5px;
-    right: 2rem;
+    bottom: 13px;
+    right: 1rem;
 }
 
 

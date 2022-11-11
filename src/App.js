@@ -1,6 +1,7 @@
 import { Route, Switch } from 'react-router-dom';
 
 import './App.css';
+import Artlab from './components/artlab/Artlab';
 
 import Authentication from './components/authentication page/Authentication';
 import Categories from './components/category page/Categories';
@@ -76,7 +77,11 @@ function App() {
             <TermsAndCondition />
           </Route>
 
-          <Route path={'/credit-checkout'}>
+          <Route path={'/artlab'}>
+            <Artlab />
+          </Route>
+
+          <Route path={'/credit-checkout/:price'}>
             <CreditCheckout />
           </Route>
 

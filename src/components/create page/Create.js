@@ -13,16 +13,14 @@ const Create = () => {
     // const params = useParams();
 
     useEffect(() => {
-        if (allImg.length === 0) {
-            getALLImg('random-images');
-            getALLImg();
-        }
-    }, [getALLImg, allImg.length]);
+        getALLImg('random-images');
+        getALLImg();
+    }, [getALLImg]);
 
     const allFetchedImg = [];
 
     allImg.forEach((img, i) => {
-        if (i < 15) {
+        if (i < 15 && !img.imgName.includes('_bg')) {
             allFetchedImg.push(img);
         }
     })

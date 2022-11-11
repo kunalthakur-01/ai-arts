@@ -32,7 +32,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
-    margin-bottom: 6rem;
+    margin-bottom: 3.5rem;
 }
 
 .plan {
@@ -41,6 +41,7 @@
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    border-radius: 5px;
 }
 
 .subscription_plans .plan:nth-child(1) {
@@ -60,7 +61,7 @@
 }
 
 .plan img {
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 
 .plan h2 {
@@ -94,7 +95,7 @@
     font-weight: 700;
     line-height: 24px;
     font-stretch: normal;
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
     position: relative;
 }
 
@@ -135,6 +136,15 @@
     position: absolute;
     left: -23px;
     top: 0;
+}
+
+.plan:nth-child(4) ul li::before ::after {
+    content: url('../../assets/tick.svg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 30px;
+    color: white;
 }
 
 .plan:nth-child(1) .getPlan_btn {
@@ -187,7 +197,7 @@
 .credit_link {
     margin-top: 4rem;
     background-color: white;
-    padding: 10px 20px;
+    padding: 10px 15px;
 }
 
 .credit_link a {
@@ -261,6 +271,62 @@
     margin-bottom: 18px;
 }
 
+.credits {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    right: 40px;
+    margin-top: 3.8rem;
+}
+
+.credits p {
+    color: rgba(255, 255, 255, 1);
+    font-size: 12px;
+    font-style: Semi Bold;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: normal;
+    font-stretch: normal;
+    margin-left: 7px;
+}
+
+.credits_price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer {
+    margin: 1rem 0 5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p {
+    font-family: Inter;
+    font-weight: 700;
+    line-height: 94.52272653579712%;
+    font-stretch: normal;
+    color: rgba(0, 0, 0, 1);
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+.footer button {
+    background-color: var(--dark-bg-color);
+    color: rgba(255, 255, 255, 1);
+    font-size: 11px;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: 94.52272653579712%;
+    font-stretch: normal;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+}
 
 
 /* ********************** RESPONSIVE ************************************************************* */

@@ -21,8 +21,12 @@
     margin: 2.5rem 0;
 }
 
-.license_section p {
+.license_section ul, p {
     padding: 0 1.5rem;
+}
+
+.license_section ul li {
+    list-style: circle;
     color: rgba(0, 0, 0, 1);
     font-size: 16px;
     font-style: Regular;

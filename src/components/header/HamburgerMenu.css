@@ -61,7 +61,7 @@
 
 .basic_links {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 2rem;
 }
 
@@ -75,6 +75,13 @@
     font-size: 16px;
     color: var(--text-color);
 
+}
+
+.language_selector_icon {
+    color: white;
+    font-size: 18px;
+    margin-top: -3px;
+    margin-left: -25px;
 }
 
 .down_arrow {
@@ -109,7 +116,7 @@
     display: block;
     position: absolute;
     top: -1.8rem;
-    left: 48rem;
+    left: 51.5rem;
     font-size: 3rem;
     color: #fff;
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import styles from './Pricing.module.css';
+import tickImg from '../../assets/playgrounds/vector5322-iw.svg';
 
 import { AiFillStar } from 'react-icons/ai';
 
@@ -27,7 +28,7 @@ const Pricing = () => {
                         <li>Download large resolution photos</li>
                     </ul>
 
-                    <Link to={'/credit-checkout'} className={styles.getPlan_btn}>Get unlimited access</Link>
+                    <Link to={'/credit-checkout/9'} className={styles.getPlan_btn}>Get unlimited access</Link>
                 </div>
                 <div className={styles.plan}>
                     <img src='https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/e3ba62aa-42c0-4bec-9859-a1fa7f4ff6ae/09883d9c-9409-4444-bddd-c8c29f939b06?org_if_sml=120521' alt="pic" />
@@ -45,26 +46,40 @@ const Pricing = () => {
                         <li>Remove watermarks, unlimted stroage, and more.</li>
                     </ul>
 
-                    <Link to={'/credit-checkout'} className={styles.getPlan_btn}>Get unlimited access</Link>
+                    <Link to={'/credit-checkout/29'} className={styles.getPlan_btn}>Get unlimited access</Link>
 
                     <div className={styles.most_popular}>
-                        <span><AiFillStar className={styles.star_icon}/> Most Polupar</span>
+                        <span><AiFillStar className={styles.star_icon} /> Most Popular</span>
                     </div>
                 </div>
                 <div className={styles.plan}>
                     <img src='https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/e3ba62aa-42c0-4bec-9859-a1fa7f4ff6ae/30912f72-0c30-468e-a506-6b5f0f28e3ff?org_if_sml=128462' alt="pic" />
                     <h2>One-time payment</h2>
                     <p>Agencies and Developers</p>
-                    <h3>$<sub>9</sub> </h3>
 
-                    <div className={styles.credit_link}>
-                        <Link to={'/credit-checkout'}>Purchase 5 credits for $10</Link>
+                    <div className={styles.credits_price}>
+                        <h3>$<sub>10</sub> </h3>
+                        <span className={styles.credits}>
+                            <img src={tickImg} alt="" />
+                            <p>5 credits</p>
+                        </span>
                     </div>
 
-                    <h3>$<sub>50</sub> </h3>
 
                     <div className={styles.credit_link}>
-                        <Link to={'/credit-checkout'}>Purchase 5 credits for $10</Link>
+                        <Link to={'/credit-checkout/10'}>Purchase 5 credits for $10</Link>
+                    </div>
+
+                    <div className={styles.credits_price}>
+                        <h3>$<sub>50</sub> </h3>
+                        <span className={styles.credits}>
+                            <img src={tickImg} alt="" />
+                            <p>25 credits</p>
+                        </span>
+                    </div>
+
+                    <div className={styles.credit_link}>
+                        <Link to={'/credit-checkout/50'}>Purchase 25 credits for $50</Link>
                     </div>
 
                     <ul>
@@ -92,8 +107,13 @@ const Pricing = () => {
                             creation</li>
                     </ul>
 
-                    <Link to={'/credit-checkout'} className={styles.getPlan_btn}>Own your visuals</Link>
+                    <Link to={'/credit-checkout/599'} className={styles.getPlan_btn}>Own your visuals</Link>
                 </div>
+            </div>
+
+            <div className={styles.footer}>
+                <p>Got a question? Chat with us and we’ll help you out!</p>
+                <button>Open livechat</button>
             </div>
 
             <h4>Frequently Asked Questions</h4>

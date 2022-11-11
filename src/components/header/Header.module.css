@@ -10,7 +10,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
+    padding: 5px 5% 5px 3%;
 }
 
 /* .logo {
@@ -26,59 +26,21 @@
     border-color: transparent;
 } */
 
-.item-group {
-    top: 17.9873046875px;
-    left: 15.537109375px;
-    width: 36.92599105834961px;
-    height: 32.05042266845703px;
-    display: flex;
-    padding: 0;
-    position: absolute;
-    align-self: auto;
-    box-sizing: border-box;
-    align-items: flex-start;
-    flex-shrink: 1;
-    border-color: transparent;
-    border-style: none;
-    border-width: 0;
-    margin-right: 0;
-    border-radius: 0px 0px 0px 0px;
-    margin-bottom: 0;
-    flex-direction: row;
-    justify-content: flex-start;
-    background-color: transparent;
+.logo {
+    width: 60px;
+    height: 60px;
 }
 
-.item-group img:nth-child(1) {
-    top: 0.06166912242770195px;
-    left: 6.384046287166711e-7px;
-    width: 28px;
-    height: 32px;
-    position: absolute;
+.logo img {
+    width: 100%;
+    height: 100%;
 }
-
-.item-group img:nth-child(2) {
-    top: 9.270784378051758px;
-    left: 2.775522470474243px;
-    width: 34px;
-    height: 23px;
-    position: absolute;
-}
-
-.item-group img:nth-child(3) {
-    top: -0.000001014288727674284px;
-    left: 10.93135929107666px;
-    width: 26px;
-    height: 27px;
-    position: absolute;
-}
-
 
 
 /* search bar********************************************************************************************/
 
 .searchbar {
-    /* flex: 1; */
+    flex: 1;
     background-color: #fff;
     display: flex;
     justify-content: space-between;
@@ -116,6 +78,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-right: 70px;
     /* padding-right: 13rem; */
 }
 
@@ -261,10 +224,10 @@
 
 .categories_header p {
     position: absolute;
-    left: 1rem;
+    left: 0;
     bottom: 2rem;
     color: rgba(118, 118, 118, 1);
-    font-size: 12px;
+    font-size: 11px;
     font-style: Regular;
     font-family: Ubuntu;
     font-weight: 500;
@@ -290,7 +253,7 @@
 @media screen and (max-width: 1000px) {
     .searchbar {
         flex: 1;
-        margin: 0 1rem 0 3rem;
+        margin: 0 1rem;
         padding: 0 10px;
     }
 
